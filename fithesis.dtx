@@ -288,6 +288,7 @@
 \def\thesisuniversity#1{\gdef\@thesisuniversity{#1}}
 \def\thesislogo#1{\gdef\@thesislogo{#1}}
 \def\thesisadvisor#1{\gdef\@thesisadvisor{#1}}
+\def\thesisdepartment#1{\gdef\@thesisdepartment{#1}}
 \def\thesisfaculty#1{\gdef\@thesisfaculty{#1}
 \ifx\@thesisfaculty\Fi
  \ifx\@thesislang\Langen
@@ -497,13 +498,13 @@
 \begin{alwayssingle}
 \thispagestyle{empty}
 \begin{center}
-{\sc \universityname\\ \facultyname}
+{\sc \universityname\\ \facultyname\\ \@thesisdepartment }
 \vskip 1em
 
 \ifx\@thesisfaculty\Fi
  {\filogo SL}\\[0.4in]
 \else
- \includegraphics[width=40mm]{\facultylogo}\\[0.4in]
+ \includegraphics[width=40mm]{loga/mu-logo}\hspace{15mm}\includegraphics[width=40mm]{\facultylogo}\\[0.4in]
 \fi
 
 \let\footnotesize\small
@@ -514,6 +515,7 @@
 \par\vfill
 {\large \thesisplaceyear}
 \end{center}
+\AdvisorName
 \end{alwayssingle}
 \newpage}
 
